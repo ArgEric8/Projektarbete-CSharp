@@ -25,7 +25,7 @@ namespace ConverterProgram
                     // Första valet
                     if (choice == 1)
                     {
-                        Console.WriteLine("Hej!");
+                        Console.WriteLine("Hej!");..
                     }
 
                     // Andra valet
