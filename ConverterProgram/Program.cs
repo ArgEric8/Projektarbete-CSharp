@@ -79,16 +79,27 @@ namespace ConverterProgram
 
                         
                     }
+                    if (choice == 2)
+                    {
+                       Console.WriteLine("alternativ 1 Gallons");
+                       Console.WriteLine("Alternativ 2 Liters");
+                       Console.WriteLine("Alternativ 3 Gallons och liter");
+                       Console.WriteLine("Alternativ 4 Tillbaka ");
+                       
+
+
+
+                    }
 
                     // Andra valet
-                    if (choice == 2)
+                    if (choice == 3)
                     {
                         Console.WriteLine("Avslutar...");
                         break;
                     }
 
                     // För höga siffror
-                    else if (choice >= 3)
+                    else if (choice >= 4)
                     {
                         Console.WriteLine("Inte giltig siffra.");
                     }
