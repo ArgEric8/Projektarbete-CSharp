@@ -34,16 +34,17 @@ namespace ConverterProgram
                         ConverterService testrun = new ConverterService();
                         testrun.CalculateTravelTime(speed, distance);
                     }
+                    if (choice == 2)
 
                     // Andra valet
-                    if (choice == 2)
+                    if (choice == 3)
                     {
                         Console.WriteLine("Avslutar...");
                         break;
                     }
 
                     // För höga siffror
-                    else if (choice >= 3)
+                    else if (choice >= 4)
                     {
                         Console.WriteLine("Inte giltig siffra.");
                     }
