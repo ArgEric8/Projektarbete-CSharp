@@ -35,6 +35,16 @@ namespace ConverterProgram
                         testrun.CalculateTravelTime(speed, distance);
                     }
                     if (choice == 2)
+                    {
+                       Console.WriteLine("alternativ 1 Gallons");
+                       Console.WriteLine("Alternativ 2 Liters");
+                       Console.WriteLine("Alternativ 3 Gallons och liter");
+                       Console.WriteLine("Alternativ 4 Tillbaka ");
+                       
+
+
+
+                    }
 
                     // Andra valet
                     if (choice == 3)
