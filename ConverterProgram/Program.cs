@@ -25,14 +25,59 @@ namespace ConverterProgram
                     // Första valet - Time = distance / speed
                     if (choice == 1)
                     {
-                        Console.WriteLine("Mata in distans");
-                        float distance = float.Parse(Console.ReadLine());
+                        float distance;
+                        float speed;
+                        Console.WriteLine("Välj enhet");
+                        Console.WriteLine("1. Meter / Sekund");
+                        Console.WriteLine("2. Kilometer / Timme");
+                        int choiceFormat = Convert.ToInt32(Console.ReadLine());
+
+                        // Meter / Sekund
+                        if (choiceFormat == 1)
+                        {
+                            Console.WriteLine("Hur många meter?");
+                            distance = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Hur många meter per sekund?");
+                            speed = float.Parse(Console.ReadLine());
+                            ConverterService testrun = new ConverterService();
+                            testrun.CalculateTravelTime(speed, distance);
+                            Console.WriteLine("Svar: {0} sekunder", 50);
+                        }
+
+                        // Kilometer / Timme
+                        else if (choiceFormat == 2)
+                        {
+                            Console.WriteLine("Hur många kilometer?");
+                            Console.WriteLine("Hur många timmar?");
+                        }
 
                         Console.WriteLine("Mata in hastighet");
-                        float speed = float.Parse(Console.ReadLine());
+                        
+                        int choiceSpeed = 0;
+                        Console.WriteLine("Välj enhet");
+                        Console.WriteLine("1. ");
+                        Console.WriteLine("2. ");
+                        Console.WriteLine("3. ");
 
-                        ConverterService testrun = new ConverterService();
-                        testrun.CalculateTravelTime(speed, distance);
+                        // 
+                        if (choiceSpeed == 1)
+                        {
+                            
+                        }
+
+                        // 
+                        if (choiceSpeed == 2)
+                        {
+                            
+                        }
+
+                        // 
+                        if (choiceSpeed == 3)
+                        {
+                            
+                        }
+
+                        
                     }
 
                     // Andra valet
