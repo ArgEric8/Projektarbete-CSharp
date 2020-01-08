@@ -16,16 +16,23 @@ namespace ConverterProgram
             while (choice != 2)
             {
                 Console.WriteLine("\nVälj ett alternativ");
-                Console.WriteLine("1. Hej");
+                Console.WriteLine("1. Time = distance / speed");
                 Console.WriteLine("2. Avsluta");
                 //choice = Convert.ToInt32(Console.ReadLine());
 
                 if (int.TryParse(Console.ReadLine(), out choice))
                 {
-                    // Första valet
+                    // Första valet - Time = distance / speed
                     if (choice == 1)
                     {
-                        Console.WriteLine("Hej!");
+                        Console.WriteLine("Mata in distans");
+                        float distance = float.Parse(Console.ReadLine());
+
+                        Console.WriteLine("Mata in hastighet");
+                        float speed = float.Parse(Console.ReadLine());
+
+                        ConverterService testrun = new ConverterService();
+                        testrun.CalculateTravelTime(speed, distance);
                     }
 
                     // Andra valet

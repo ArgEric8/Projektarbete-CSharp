@@ -37,12 +37,17 @@ namespace Service
         }
         public float CalculateTravelTime(float speed, float distance)
         {
+            float time = distance / speed;
+            Console.WriteLine("Svar: {0}", time);
             throw new NotImplementedException();
         }
-        public float CalculateTraveledDistance(float speed, float time) {
+        public float CalculateTraveledDistance(float speed, float time)
+        {
             throw new NotFiniteNumberException();
         }
-        public float CalculateSpeed(float time, float distance) {
+        public float CalculateSpeed(float time, float distance)
+        {
+
             throw new NotFiniteNumberException();
         }
 
