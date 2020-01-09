@@ -49,11 +49,15 @@ namespace Service
             float time = distance / speed;
             return time;
         }
-        public float CalculateTraveledDistance(float speed, float time) {
-            throw new NotFiniteNumberException();
+        public float CalculateTraveledDistance(float speed, float time)
+        {
+            float distance = speed * time;
+            return distance;
         }
-        public float CalculateSpeed(float time, float distance) {
-            throw new NotFiniteNumberException();
+        public float CalculateSpeed(float time, float distance)
+        {
+            float speed = distance / time;
+            return speed;
         }
 
         public float CalculateVoltage(float res, float amp)
@@ -64,15 +68,16 @@ namespace Service
         
         public float ConvertCelciusToFahrenheit(float celcius)
         {
-            
             float fahrenheit = (celsius * 9) / 5 + 32;
         }
+           
         
 
         public float ConvertFahrenheitToCelcius(float fahrenheit)
         {
-            float celsius = (fahrenheit - 32) * 5 / 9;
 
+         float celsius = (fahrenheit - 32) * 5 / 9;
+         return celsius;
         }
 
         public float ConvertFromGallonToLiter(float gallon)
