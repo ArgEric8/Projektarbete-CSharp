@@ -18,7 +18,7 @@ namespace Service
 
         // CalcAmps, CalcResist, CalcVolt
         // CalcDiameter, CalcRadius
-        // CalcTravelTime, CalcTravelDistance, CalcSpeed --- Eric
+        // CalcTravelTime, CalcTravelDistance, CalcSpeed
         // CalcFahrenheit, CalcCelsius
         // CalcHours, CalcMinutes
         // CalcLiter, CalcGallon

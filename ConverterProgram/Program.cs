@@ -126,7 +126,7 @@ namespace ConverterProgram
                     distance = float.Parse(Console.ReadLine());
                     Console.WriteLine("Ange timmar");
                     time = float.Parse(Console.ReadLine());
-                    Console.WriteLine("km/h: {0:0.##}", converter.CalculateTravelTime(time, distance));
+                    Console.WriteLine("km/h: {0:0.##}", converter.CalculateSpeed(time, distance));
                 }
 
                 // Återvänd
