@@ -67,7 +67,7 @@ namespace Service
 
         public float ConvertFromGallonToLiter(float gallon)
         {
-            float gallon=
+            throw new NotImplementedException();
         }
 
         public float ConvertFromLiterToGallon(float liter)
