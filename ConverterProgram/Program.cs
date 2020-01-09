@@ -26,7 +26,6 @@ namespace ConverterProgram
                     // Första valet - Time = distance / speed
                     if (choice == 1)
                     {
-                        ConverterService testrun = new ConverterService();
                         float distance;
                         float speed;
                         Console.WriteLine("\nVälj");
@@ -43,20 +42,13 @@ namespace ConverterProgram
                             Console.WriteLine("Hur många meter per sekund?");
                             speed = float.Parse(Console.ReadLine());
 
-                            Console.WriteLine("Sekunder: {0:0.##}",testrun.CalculateTravelTime(speed, distance));
-                            Console.WriteLine("Minuter: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60);
-                            Console.WriteLine("Timmar: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60/60);
+                            Console.WriteLine("Sekunder: {0:0.##}", converter.CalculateTravelTime(speed, distance));
                         }
 
                         // Kilometer / Timme
                         else if (choiceFormat == 2)
                         {
-                            Console.WriteLine("Hur många kilometer?");
-                            distance = float.Parse(Console.ReadLine());
-                            Console.WriteLine("Hur många kilometer per timme?");
-                            speed = float.Parse(Console.ReadLine());
-
-                            Console.WriteLine("Svar: {0:0.0#} timmar", testrun.CalculateTravelTime(speed, distance));
+                            Console.WriteLine("");
                         }
                     }
 
@@ -87,6 +79,11 @@ namespace ConverterProgram
                         Console.WriteLine("Endast siffror godtas");
                     }
             }
+        }
+
+        public showTimeDistanceSpeedMenu();
+        {
+            
         }
     }
 }
