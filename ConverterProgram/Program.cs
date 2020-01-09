@@ -26,7 +26,7 @@ namespace ConverterProgram
                     // Första valet 
                     if (choice == 1)
                     {
-                        
+                        showTimeDistanceSpeedMenu();
                     }
 
                     // Andra valet

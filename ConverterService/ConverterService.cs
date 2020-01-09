@@ -23,7 +23,7 @@ namespace Service
 
         public float CalculateResistance(float voltage, float amps)
         {
-            throw new NotImplementedException();
+            float  = 
         }
 
         public float CalculateDiameterFromArea(float area)
@@ -49,7 +49,8 @@ namespace Service
 
         public float CalculateVoltage(float res, float amp)
         {
-            throw new NotImplementedException();
+            float voltage = amp * res;
+            return voltage;
         }
         
         public float ConvertCelciusToFahrenheit(float celcius)
