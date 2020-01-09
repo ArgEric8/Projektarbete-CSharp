@@ -39,7 +39,6 @@ namespace Service
         {
             float time = distance / speed;
             return time;
-            throw new NotImplementedException();
         }
         public float CalculateTraveledDistance(float speed, float time)
         {
@@ -68,7 +67,7 @@ namespace Service
 
         public float ConvertFromGallonToLiter(float gallon)
         {
-            throw new NotImplementedException();
+            float gallon=
         }
 
         public float ConvertFromLiterToGallon(float liter)

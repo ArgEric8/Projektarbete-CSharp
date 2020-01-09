@@ -16,7 +16,7 @@ namespace ConverterProgram
             while (choice != 3)
             {
                 Console.WriteLine("\nVälj ett alternativ");
-                Console.WriteLine("1. Time = distance / speed");
+                Console.WriteLine("1. Time / distance / speed");
                 Console.WriteLine("2. Gallons");
                 Console.WriteLine("3. Avsluta");
                 //choice = Convert.ToInt32(Console.ReadLine());
@@ -26,7 +26,7 @@ namespace ConverterProgram
                     // Första valet - Time = distance / speed
                     if (choice == 1)
                     {
-                        ConverterService testrun = new ConverterService();
+                        // ConverterService testrun = new ConverterService();
                         float distance;
                         float speed;
                         Console.WriteLine("\nVälj");
@@ -43,9 +43,9 @@ namespace ConverterProgram
                             Console.WriteLine("Hur många meter per sekund?");
                             speed = float.Parse(Console.ReadLine());
 
-                            Console.WriteLine("Sekunder: {0:0.##}",testrun.CalculateTravelTime(speed, distance));
-                            Console.WriteLine("Minuter: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60);
-                            Console.WriteLine("Timmar: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60/60);
+                            Console.WriteLine("Sekunder: {0:0.##}",converter.CalculateTravelTime(speed, distance));
+                            Console.WriteLine("Minuter: {0:0.##}", converter.CalculateTravelTime(speed, distance)/60);
+                            Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance)/60/60);
                         }
 
                         // Kilometer / Timme
@@ -56,7 +56,7 @@ namespace ConverterProgram
                             Console.WriteLine("Hur många kilometer per timme?");
                             speed = float.Parse(Console.ReadLine());
 
-                            Console.WriteLine("Svar: {0:0.0#} timmar", testrun.CalculateTravelTime(speed, distance));
+                            Console.WriteLine("Svar: {0:0.0#} timmar", converter.CalculateTravelTime(speed, distance));
                         }
                     }
 
