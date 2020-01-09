@@ -16,28 +16,38 @@ namespace Service
         //Radius = square root (area / pi)
         //Diameter = radius * 2
 
-        public float CalculateAmps(float voltage, float resistance)
+        // CalcAmps, CalcResist, CalcVolt
+        // CalcDiameter, CalcRadius
+        // CalcTravelTime, CalcTravelDistance, CalcSpeed
+        // CalcFahrenheit, CalcCelsius
+        // CalcHours, CalcMinutes
+        // CalcLiter, CalcGallon
+
+        public float CalculateAmps(float voltage, float res)
         {
-            throw new NotImplementedException();
+            float amp = voltage / res;
+            return amp;
         }
 
-        public float CalculateResistance(float voltage, float amps)
+        public float CalculateResistance(float voltage, float amp)
         {
-            throw new NotImplementedException();
+            float res = voltage / amp;
+            return res;
         }
 
         public float CalculateDiameterFromArea(float area)
         {
-            throw new NotImplementedException();
+            float area = pi*d^2/4;
         }
 
         public float CalculateRadiusFromArea(float area)
         {
-            throw new NotImplementedException();
+            float area = pi*r^2;
         }
         public float CalculateTravelTime(float speed, float distance)
         {
-            throw new NotImplementedException();
+            float time = distance / speed;
+            return time;
         }
         public float CalculateTraveledDistance(float speed, float time) {
             throw new NotFiniteNumberException();
@@ -48,57 +58,46 @@ namespace Service
 
         public float CalculateVoltage(float res, float amp)
         {
-            throw new NotImplementedException();
+            float voltage = amp * res;
+            return voltage;
         }
         
         public float ConvertCelciusToFahrenheit(float celcius)
         {
-            throw new NotImplementedException();
-
-            double fahrenheit;
-
-         double celsius = 36;
-         Console.WriteLine("Celsius: " + celsius);
-
-         fahrenheit = (celsius * 9) / 5 + 32;
-         Console.WriteLine("Fahrenheit: " + fahrenheit);
-
-         Console.ReadLine();
+            
+            float fahrenheit = (celsius * 9) / 5 + 32;
         }
+        
 
         public float ConvertFahrenheitToCelcius(float fahrenheit)
         {
-            throw new NotImplementedException();
+            float celsius = (fahrenheit - 32) * 5 / 9;
 
-            double celsius;
-
-         double fahrenheit = 97;
-         Console.WriteLine("Fahrenheit: " + fahrenheit);
-
-         celsius = (fahrenheit - 32) * 5 / 9;
-
-         Console.WriteLine("Celsius: " + celsius);
-         Console.ReadLine();
         }
 
         public float ConvertFromGallonToLiter(float gallon)
         {
-            throw new NotImplementedException();
+            float liter = 0.26f * gallon;
+            return liter;
         }
 
         public float ConvertFromLiterToGallon(float liter)
         {
-            throw new NotImplementedException();
+            
+            float gallon = 3.78f * liter;
+            return gallon;
         }
 
         public float ConvertFromHoursToMinutes(float hours)
         {
-            throw new NotImplementedException();
-        }
+            float minutes = 60 / hours;
+        
+         }
 
         public float ConvertFromMinutesToHours(float minutes)
         {
-            throw new NotImplementedException();
+            float hours = 60 * minutes;
+            
         }
     }
 }
