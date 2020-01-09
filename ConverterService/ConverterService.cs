@@ -23,7 +23,7 @@ namespace Service
         // CalcHours, CalcMinutes
         // CalcLiter, CalcGallon
 
-        public float CalculateAmps(float voltage, float resistance)
+        public float CalculateAmps(float voltage, float res)
         {
             float amp = voltage / res;
             return amp;
