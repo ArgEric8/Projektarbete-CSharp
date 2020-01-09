@@ -23,7 +23,7 @@ namespace ConverterProgram
 
                 if (int.TryParse(Console.ReadLine(), out choice))
                 {
-                    // Första valet
+                    // Första valet 
                     if (choice == 1)
                     {
                         float distance;
