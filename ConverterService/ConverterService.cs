@@ -16,9 +16,10 @@ namespace Service
         //Radius = square root (area / pi)
         //Diameter = radius * 2
 
-        public float CalculateAmps(float voltage, float resistance)
+        public float CalculateAmps(float voltage, float res)
         {
-            
+            float amp = voltage / res;
+            return amp;
         }
 
         public float CalculateResistance(float voltage, float amp)
