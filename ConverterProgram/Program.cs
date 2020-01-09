@@ -13,11 +13,12 @@ namespace ConverterProgram
 
 
             int choice = 0;
-            while (choice != 2)
+            while (choice != 3)
             {
                 Console.WriteLine("\nVälj ett alternativ");
                 Console.WriteLine("1. Time = distance / speed");
-                Console.WriteLine("2. Avsluta");
+                Console.WriteLine("2. Gallons");
+                Console.WriteLine("3. Avsluta");
                 //choice = Convert.ToInt32(Console.ReadLine());
 
                 if (int.TryParse(Console.ReadLine(), out choice))
@@ -25,12 +26,14 @@ namespace ConverterProgram
                     // Första valet - Time = distance / speed
                     if (choice == 1)
                     {
+                        ConverterService testrun = new ConverterService();
                         float distance;
                         float speed;
-                        Console.WriteLine("Välj enhet");
-                        Console.WriteLine("1. Meter / Sekund");
-                        Console.WriteLine("2. Kilometer / Timme");
+                        Console.WriteLine("\nVälj");
+                        Console.WriteLine("1. Meter / sekund");
+                        Console.WriteLine("2. Kilometer / timme");
                         int choiceFormat = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine();
 
                         // Meter / Sekund
                         if (choiceFormat == 1)
@@ -39,59 +42,34 @@ namespace ConverterProgram
                             distance = float.Parse(Console.ReadLine());
                             Console.WriteLine("Hur många meter per sekund?");
                             speed = float.Parse(Console.ReadLine());
-                            ConverterService testrun = new ConverterService();
-                            testrun.CalculateTravelTime(speed, distance);
-                            Console.WriteLine("Svar: {0} sekunder", 50);
+
+                            Console.WriteLine("Sekunder: {0:0.##} sekunder",testrun.CalculateTravelTime(speed, distance));
+                            Console.WriteLine("Minuter: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60);
+                            Console.WriteLine("Timmar: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60/60);
                         }
 
                         // Kilometer / Timme
                         else if (choiceFormat == 2)
                         {
                             Console.WriteLine("Hur många kilometer?");
-                            Console.WriteLine("Hur många timmar?");
+                            distance = float.Parse(Console.ReadLine());
+                            Console.WriteLine("Hur många kilometer per timme?");
+                            speed = float.Parse(Console.ReadLine());
+
+                            Console.WriteLine("Svar: {0:0.0#} timmar", testrun.CalculateTravelTime(speed, distance));
                         }
-
-                        Console.WriteLine("Mata in hastighet");
-                        
-                        int choiceSpeed = 0;
-                        Console.WriteLine("Välj enhet");
-                        Console.WriteLine("1. ");
-                        Console.WriteLine("2. ");
-                        Console.WriteLine("3. ");
-
-                        // 
-                        if (choiceSpeed == 1)
-                        {
-                            
-                        }
-
-                        // 
-                        if (choiceSpeed == 2)
-                        {
-                            
-                        }
-
-                        // 
-                        if (choiceSpeed == 3)
-                        {
-                            
-                        }
-
-                        
                     }
+
+                    // Andra valet
                     if (choice == 2)
                     {
                        Console.WriteLine("alternativ 1 Gallons");
                        Console.WriteLine("Alternativ 2 Liters");
                        Console.WriteLine("Alternativ 3 Gallons och liter");
                        Console.WriteLine("Alternativ 4 Tillbaka ");
-                       
-
-
-
                     }
 
-                    // Andra valet
+                    // Tredje valet
                     if (choice == 3)
                     {
                         Console.WriteLine("Avslutar...");
