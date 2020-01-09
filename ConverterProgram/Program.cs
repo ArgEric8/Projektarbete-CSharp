@@ -10,20 +10,20 @@ namespace ConverterProgram
             ConverterService converter = new ConverterService();
             //Start point for the program.
             Console.WriteLine("Start point for the program.");
+            
 
 
             int choice = 0;
-            while (choice != 3)
+            while (choice != 2)
             {
                 Console.WriteLine("\nVälj ett alternativ");
-                Console.WriteLine("1. Time = distance / speed");
-                Console.WriteLine("2. Gallons");
-                Console.WriteLine("3. Avsluta");
+                Console.WriteLine("1. Hej");
+                Console.WriteLine("2. Avsluta");
                 //choice = Convert.ToInt32(Console.ReadLine());
 
                 if (int.TryParse(Console.ReadLine(), out choice))
                 {
-                    // Första valet - Time = distance / speed
+                    // Första valet
                     if (choice == 1)
                     {
                         float distance;
@@ -55,21 +55,12 @@ namespace ConverterProgram
                     // Andra valet
                     if (choice == 2)
                     {
-                       Console.WriteLine("alternativ 1 Gallons");
-                       Console.WriteLine("Alternativ 2 Liters");
-                       Console.WriteLine("Alternativ 3 Gallons och liter");
-                       Console.WriteLine("Alternativ 4 Tillbaka ");
-                    }
-
-                    // Tredje valet
-                    if (choice == 3)
-                    {
                         Console.WriteLine("Avslutar...");
                         break;
                     }
 
                     // För höga siffror
-                    else if (choice >= 4)
+                    else if (choice >= 3)
                     {
                         Console.WriteLine("Inte giltig siffra.");
                     }
@@ -83,7 +74,7 @@ namespace ConverterProgram
 
         public showTimeDistanceSpeedMenu();
         {
-            
+
         }
     }
 }
