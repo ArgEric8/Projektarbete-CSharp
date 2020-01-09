@@ -16,6 +16,13 @@ namespace Service
         //Radius = square root (area / pi)
         //Diameter = radius * 2
 
+        // CalcAmps, CalcResist, CalcVolt
+        // CalcDiameter, CalcRadius
+        // CalcTravelTime, CalcTravelDistance, CalcSpeed
+        // CalcFahrenheit, CalcCelsius
+        // CalcHours, CalcMinutes
+        // CalcLiter, CalcGallon
+
         public float CalculateAmps(float voltage, float resistance)
         {
             throw new NotImplementedException();
