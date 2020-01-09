@@ -37,12 +37,8 @@ namespace Service
         }
         public float CalculateTravelTime(float speed, float distance)
         {
-<<<<<<< HEAD
             float time = distance / speed;
             return time;
-=======
-            throw new NotImplementedException();
->>>>>>> e5c2f13b8c597ec702e4b61fb217da3df75a1812
         }
         public float CalculateTraveledDistance(float speed, float time) {
             throw new NotFiniteNumberException();
@@ -88,12 +84,15 @@ namespace Service
 
         public float ConvertFromGallonToLiter(float gallon)
         {
-            throw new NotImplementedException();
+            float liter = 0.26f * gallon;
+            return liter;
         }
 
         public float ConvertFromLiterToGallon(float liter)
         {
-            throw new NotImplementedException();
+            
+            float gallon = 3.78f * liter;
+            return gallon;
         }
 
         public float ConvertFromHoursToMinutes(float hours)
