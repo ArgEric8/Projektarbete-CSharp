@@ -43,7 +43,7 @@ namespace ConverterProgram
                             Console.WriteLine("Hur många meter per sekund?");
                             speed = float.Parse(Console.ReadLine());
 
-                            Console.WriteLine("Sekunder: {0:0.##} sekunder",testrun.CalculateTravelTime(speed, distance));
+                            Console.WriteLine("Sekunder: {0:0.##}",testrun.CalculateTravelTime(speed, distance));
                             Console.WriteLine("Minuter: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60);
                             Console.WriteLine("Timmar: {0:0.##}", testrun.CalculateTravelTime(speed, distance)/60/60);
                         }
