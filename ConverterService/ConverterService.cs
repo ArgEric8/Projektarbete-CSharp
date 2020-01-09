@@ -50,10 +50,12 @@ namespace Service
             return time;
         }
         public float CalculateTraveledDistance(float speed, float time) {
-            throw new NotFiniteNumberException();
+            float distance = speed * time;
+            return distance;
         }
         public float CalculateSpeed(float time, float distance) {
-            throw new NotFiniteNumberException();
+            float speed = distance / time;
+            return speed;
         }
 
         public float CalculateVoltage(float res, float amp)
