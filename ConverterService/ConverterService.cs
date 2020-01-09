@@ -18,7 +18,7 @@ namespace Service
 
         // CalcAmps, CalcResist, CalcVolt
         // CalcDiameter, CalcRadius
-        // CalcTravelTime, CalcTravelDistance, CalcSpeed
+        // CalcTravelTime, CalcTravelDistance, CalcSpeed --- Eric
         // CalcFahrenheit, CalcCelsius
         // CalcHours, CalcMinutes
         // CalcLiter, CalcGallon
@@ -49,11 +49,15 @@ namespace Service
             float time = distance / speed;
             return time;
         }
-        public float CalculateTraveledDistance(float speed, float time) {
-            throw new NotFiniteNumberException();
+        public float CalculateTraveledDistance(float speed, float time)
+        {
+            float distance = speed * time;
+            return distance;
         }
-        public float CalculateSpeed(float time, float distance) {
-            throw new NotFiniteNumberException();
+        public float CalculateSpeed(float time, float distance)
+        {
+            float speed = distance / time;
+            return speed;
         }
 
         public float CalculateVoltage(float res, float amp)
@@ -64,32 +68,29 @@ namespace Service
         
         public float ConvertCelciusToFahrenheit(float celcius)
         {
-            throw new NotImplementedException();
+            float fahrenheit;
+            float celsius = 36;
+            Console.WriteLine("Celsius: " + celsius);
 
-            double fahrenheit;
+            fahrenheit = (celsius * 9) / 5 + 32;
+            Console.WriteLine("Fahrenheit: " + fahrenheit);
 
-         double celsius = 36;
-         Console.WriteLine("Celsius: " + celsius);
-
-         fahrenheit = (celsius * 9) / 5 + 32;
-         Console.WriteLine("Fahrenheit: " + fahrenheit);
-
-         Console.ReadLine();
+            Console.ReadLine();
+            return fahrenheit;
         }
 
         public float ConvertFahrenheitToCelcius(float fahrenheit)
         {
-            throw new NotImplementedException();
+            float celsius;
 
-            double celsius;
-
-         double fahrenheit = 97;
+         fahrenheit = 97;
          Console.WriteLine("Fahrenheit: " + fahrenheit);
 
          celsius = (fahrenheit - 32) * 5 / 9;
 
          Console.WriteLine("Celsius: " + celsius);
          Console.ReadLine();
+         return celsius;
         }
 
         public float ConvertFromGallonToLiter(float gallon)
