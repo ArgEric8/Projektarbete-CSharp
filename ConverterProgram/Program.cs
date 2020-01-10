@@ -97,7 +97,11 @@ namespace ConverterProgram
                 Console.WriteLine("3. Hastighet");
                 Console.WriteLine("4. Återvänd");
                 Console.WriteLine("5. Avsluta");
-                choiceFormat = Convert.ToInt32(Console.ReadLine());
+                
+                if (int.TryParse(Console.ReadLine(), out choiceFormat))
+                {
+                    
+                }
                 Console.WriteLine();
 
                 // Travel Time
@@ -111,6 +115,7 @@ namespace ConverterProgram
                         {
                             Console.WriteLine("Bokstäver tillåts inte");
                             letter = true;
+                            break;
                         }
                         Console.WriteLine("Ange km/h");
                         letter = float.TryParse(Console.ReadLine(), out speed);
@@ -118,9 +123,10 @@ namespace ConverterProgram
                         {
                             Console.WriteLine("Bokstäver tillåts inte");
                             letter = true;
+                            break;
                         }
-                        else {break;}
                         Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
+                        break;
                     }
                 }
 

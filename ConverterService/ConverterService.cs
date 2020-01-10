@@ -98,16 +98,14 @@ namespace Service
 
         public float ConvertFromHoursToMinutes(float hours)
         {
-            float minutes = 60 / hours;
+            float minutes = hours / 60;
             return minutes;
-        
          }
 
         public float ConvertFromMinutesToHours(float minutes)
         {
             float hours = 60 * minutes;
             return hours;
-            
         }
     }
 }
