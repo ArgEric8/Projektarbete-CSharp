@@ -14,7 +14,7 @@ namespace ConverterProgram
                 Console.WriteLine("\nHuvudmeny/");
                 Console.WriteLine("\n1. Tid-Distans-Hastighet");
                 Console.WriteLine("2. Liter-Gallon");
-                Console.WriteLine("3. Amps-Resist-Volt");
+                Console.WriteLine("3. Amp-Resist-Volt");
                 Console.WriteLine("4. Diameter-Radius");
                 Console.WriteLine("5. Fahrenheit-Celsius");
                 Console.WriteLine("6. Hours-Minutes");
@@ -38,25 +38,25 @@ namespace ConverterProgram
                     // Tredje valet 
                     if (choice == 3)
                     {
-                        
+                        showAmpResistVoltMenu();
                     }
 
                     // Fjärde valet 
                     if (choice == 4)
                     {
-                        
+                        showDiameterRadiusMenu();
                     }
 
                     // Femte valet 
                     if (choice == 5)
                     {
-                        
+                        showFahrenheitCelsiusMenu();
                     }
 
                     // Sjätte valet 
                     if (choice == 6)
                     {
-                        
+                        showHoursMinutesMenu();
                     }
 
                     // Avsluta programmet
@@ -156,6 +156,26 @@ namespace ConverterProgram
             {
                 Console.WriteLine("Avsluta");
             }
+        }
+
+        static void showAmpResistVoltMenu()
+        {
+            
+        }
+
+        static void showDiameterRadiusMenu()
+        {
+
+        }
+
+        static void showFahrenheitCelsiusMenu()
+        {
+
+        }
+
+        static void showHoursMinutesMenu()
+        {
+
         }
     }
 }

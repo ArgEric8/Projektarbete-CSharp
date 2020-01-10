@@ -69,6 +69,7 @@ namespace Service
         public float ConvertCelciusToFahrenheit(float celcius)
         {
             float fahrenheit = (celsius * 9) / 5 + 32;
+            return fahrenheit;
         }
            
         
@@ -96,12 +97,14 @@ namespace Service
         public float ConvertFromHoursToMinutes(float hours)
         {
             float minutes = 60 / hours;
+            return minutes;
         
          }
 
         public float ConvertFromMinutesToHours(float minutes)
         {
             float hours = 60 * minutes;
+            return hours;
             
         }
     }
