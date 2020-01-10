@@ -242,7 +242,7 @@ namespace ConverterProgram
         static void showDiameterRadiusMenu()
         {
             ConverterService converter = new ConverterService();
-            choice = 0;
+            int choice = 0;
             float Diameter;
             float Radius;
             float Area;
