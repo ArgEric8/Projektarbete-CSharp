@@ -86,6 +86,7 @@ namespace ConverterProgram
             float distance;
             float speed;
             float time;
+            bool letter = true;
             int choiceFormat = 0;
 
             while (choiceFormat != 4)
@@ -102,11 +103,24 @@ namespace ConverterProgram
                 // Travel Time
                 if (choiceFormat == 1)
                 {
-                    Console.WriteLine("Ange kilometer");
-                    float.TryParse(Console.ReadLine(), out distance);
-                    Console.WriteLine("Ange km/h");
-                    float.TryParse(Console.ReadLine(), out speed);
-                    Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
+                    while (letter == true)
+                    {
+                        Console.WriteLine("Ange kilometer");
+                        letter = float.TryParse(Console.ReadLine(), out distance);
+                        if (letter == false)
+                        {
+                            Console.WriteLine("Bokstäver tillåts inte");
+                        }
+                        Console.WriteLine("Ange km/h");
+                        letter = float.TryParse(Console.ReadLine(), out speed);
+                        if (letter == false)
+                        {
+                            Console.WriteLine("Bokstäver tillåts inte");
+                        }
+                        else {break;}
+                        Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
+                        letter = false;
+                    }
                 }
 
                 // Travel Distance
