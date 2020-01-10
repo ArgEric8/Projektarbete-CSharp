@@ -104,8 +104,8 @@ namespace ConverterProgram
                 {
                     Console.WriteLine("Ange kilometer");
                     float.TryParse(Console.ReadLine(), out distance);
-                    Console.WriteLine("Ange hastighet");
-                    speed = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange km/h");
+                    float.TryParse(Console.ReadLine(), out speed);
                     Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
                 }
 
@@ -113,9 +113,9 @@ namespace ConverterProgram
                 if (choiceFormat == 2)
                 {
                     Console.WriteLine("Ange timmar");
-                    time = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Ange hastighet");
-                    speed = float.Parse(Console.ReadLine());
+                    float.TryParse(Console.ReadLine(), out time);
+                    Console.WriteLine("Ange km/h");
+                    float.TryParse(Console.ReadLine(), out speed);
                     Console.WriteLine("Kilometer: {0:0.##}", converter.CalculateTraveledDistance(time, speed));
                 }
 
@@ -259,6 +259,7 @@ namespace ConverterProgram
 
 
             while(choice !=3)
+            {
              Console.WriteLine("\nHuvudmeny/Diameter och Radien av Arean/");
                 Console.WriteLine("\n1. Diametern av Arean");
                 Console.WriteLine("2. Radien av Arean");
@@ -283,6 +284,7 @@ namespace ConverterProgram
                     Console.WriteLine("Avslutar...");
                     Environment.Exit(0);
                 }
+            }
 
         }
 
@@ -295,6 +297,7 @@ namespace ConverterProgram
 
 
             while(choice !=3)
+            {
              Console.WriteLine("\nHuvudmeny/Fahrenheit och Celsius /");
                 Console.WriteLine("\n1. Konventera Fahrenheit till Celsius");
                 Console.WriteLine("2. Konventera Celsius till Fahrenheit");
@@ -319,6 +322,7 @@ namespace ConverterProgram
                     Console.WriteLine("Avslutar...");
                     Environment.Exit(0);
                 }
+            }
 
         }
 
