@@ -374,6 +374,7 @@ namespace ConverterProgram
                 // Återvänd
                 if (choice ==3)
                 {
+<<<<<<< HEAD
                     break;
                 }
                 // Avsluta
@@ -383,6 +384,12 @@ namespace ConverterProgram
                     Environment.Exit(0);
                 }
             }
+=======
+                    break;                                                                                                                                                                 
+                }                                                                                                                                                                                                           
+
+
+>>>>>>> 6dd3f5b521ed8d450e5e8a62857909f1a568ebd1
         }
     }
 }
