@@ -160,11 +160,90 @@ namespace ConverterProgram
 
         static void showAmpResistVoltMenu()
         {
-            
+            ConverterService converter = new ConverterService();
+            float amp;
+            float res;
+            float voltage;
+            int choiceFormat = 0;
+
+            while (choiceFormat != 4)
+            {
+                Console.WriteLine("\nHuvudmeny/Amp-Resist-Volt/");
+                Console.WriteLine("\n1. Amp");
+                Console.WriteLine("2. Resistans");
+                Console.WriteLine("3. Voltage");
+                Console.WriteLine("4. Återvänd");
+                Console.WriteLine("5. Avsluta");
+                choiceFormat = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+
+                // Calculate Amps
+                if (choiceFormat == 1)
+                {
+                    Console.WriteLine("Ange voltage");
+                    voltage = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange resistans");
+                    res = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Amps: {0:0.##}", converter.CalculateAmps(voltage, res));
+                }
+
+                // Calculate Resistance
+                if (choiceFormat == 2)
+                {
+                    Console.WriteLine("Ange voltage");
+                    voltage = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange amp");
+                    amp = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Kilometer: {0:0.##}", converter.CalculateTraveledDistance(time, speed));
+                }
+
+                // Calculate Voltage
+                if (choiceFormat == 3)
+                {
+                    Console.WriteLine("Distans");
+                    distance = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange timmar");
+                    time = float.Parse(Console.ReadLine());
+                    Console.WriteLine("km/h: {0:0.##}", converter.CalculateSpeed(time, distance));
+                }
+
+                // Återvänd
+                if (choiceFormat == 4){}
+
+                // Avsluta
+                else if (choiceFormat == 5)
+                {
+                    Console.WriteLine("Avslutar...");
+                    Environment.Exit(0);
+                }
+            }
         }
 
         static void showDiameterRadiusMenu()
         {
+            ConverterService converter = new ConverterService();
+            choice = 0;
+            float Diameter;
+            float Radius;
+            float Area;
+
+
+            while(choice !=3)
+             Console.WriteLine("\nHuvudmeny/Diameter och Radien av Arean/");
+                Console.WriteLine("\n1. Diametern av Arean");
+                Console.WriteLine("2. Radien av Arean");
+                Console.WriteLine("3. Återvänd");
+                choice = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+
+                if(choice == 1)
+                {
+                    Console.WriteLine("Ange Arean");
+                    Area = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange Diametern");
+                    Diameter = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Arean: {0:0.##}", converter.CalculateDiameterFromArea(Area));
+                }
 
         }
 
