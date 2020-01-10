@@ -103,7 +103,7 @@ namespace ConverterProgram
                 if (choiceFormat == 1)
                 {
                     Console.WriteLine("Ange kilometer");
-                    distance = float.Parse(Console.ReadLine());
+                    float.TryParse(Console.ReadLine(), out distance);
                     Console.WriteLine("Ange hastighet");
                     speed = float.Parse(Console.ReadLine());
                     Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
