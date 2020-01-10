@@ -258,12 +258,13 @@ namespace ConverterProgram
             float Area;
 
 
-            while(choice !=3)
+            while(choice !=4)
             {
              Console.WriteLine("\nHuvudmeny/Diameter och Radien av Arean/");
                 Console.WriteLine("\n1. Diametern av Arean");
                 Console.WriteLine("2. Radien av Arean");
                 Console.WriteLine("3. Återvänd");
+                Console.WriteLine("4. Avsluta");
                 choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
 
@@ -279,11 +280,18 @@ namespace ConverterProgram
                     Area = float.Parse(Console.ReadLine());
                     Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(Area));
                 }
-                else if (choice == 3)
+                 if (choice == 3) 
+                {   
+                    break;
+                }
+
+                // Avsluta
+                if (choice == 4)
                 {
-                    Console.WriteLine("Avslutar...");
+                    Console.WriteLine("Avsluta");
                     Environment.Exit(0);
                 }
+            
             }
 
         }
@@ -296,12 +304,13 @@ namespace ConverterProgram
             float celsius;
 
 
-            while(choice !=3)
+            while(choice !=4)
             {
              Console.WriteLine("\nHuvudmeny/Fahrenheit och Celsius /");
                 Console.WriteLine("\n1. Konventera Fahrenheit till Celsius");
                 Console.WriteLine("2. Konventera Celsius till Fahrenheit");
                 Console.WriteLine("3. Återvänd");
+                Console.WriteLine("4. Avsluta");
                 choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
 
@@ -317,9 +326,15 @@ namespace ConverterProgram
                     celsius = float.Parse(Console.ReadLine());
                     Console.WriteLine("Fahrenheit: {0:0.##}", converter.ConvertCelciusToFahrenheit(celsius));
                 }
-                else if (choice == 3)
+                  if (choice == 3) 
+                {   
+                    break;
+                }
+
+                // Avsluta
+                if (choice == 4)
                 {
-                    Console.WriteLine("Avslutar...");
+                    Console.WriteLine("Avsluta");
                     Environment.Exit(0);
                 }
             }
@@ -334,11 +349,13 @@ namespace ConverterProgram
             float minutes;
 
 
-            while(choice !=3)
+            while(choice !=4)
+            { 
              Console.WriteLine("\nHuvudmeny/Timmar och Minuter/");
                 Console.WriteLine("\n1. Timmar till minuter");
                 Console.WriteLine("2. Minuter till timmar");
                 Console.WriteLine("3. Återvänd");
+                Console.WriteLine("4. Avsluta");
                 choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
                 
@@ -355,7 +372,18 @@ namespace ConverterProgram
                     minutes = float.Parse(Console.ReadLine());
                     Console.WriteLine("I timmar: {0.##}", converter.ConvertFromMinutesToHours(minutes));
                 }
+                 if (choice == 3) 
+                {   
+                    break;
+                }
 
+                // Avsluta
+                if (choice == 4)
+                {
+                    Console.WriteLine("Avsluta");
+                    Environment.Exit(0);
+                }
+                }
 
         }
     }
