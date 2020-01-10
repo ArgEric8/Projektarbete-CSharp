@@ -37,7 +37,7 @@ namespace Service
 
         public float CalculateDiameterFromArea(float area)
         {
-            float area = pi*d^2/4;
+            float area = *d^2/4;
         }
 
         public float CalculateRadiusFromArea(float area)

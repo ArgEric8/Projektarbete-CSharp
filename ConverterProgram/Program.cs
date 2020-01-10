@@ -258,12 +258,11 @@ namespace ConverterProgram
 
                 if(choice == 1)
                 {
-                    Console.WriteLine("Ange Arean");
-                    Area = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Ange Diametern");
+                    Console.WriteLine("Ange Diamtern");
                     Diameter = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Arean: {0:0.##}", converter.CalculateDiameterFromArea(Area));
+                    Console.WriteLine("Diametern av Arean är: {0:0.##}", converter.CalculateDiameterFromArea(Area));
                 }
+                if(choice )
 
         }
 
