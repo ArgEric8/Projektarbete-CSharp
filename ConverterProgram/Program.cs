@@ -355,7 +355,10 @@ namespace ConverterProgram
                     minutes = float.Parse(Console.ReadLine());
                     Console.WriteLine("I timmar: {0.##}", converter.ConvertFromMinutesToHours(minutes));
                 }
-                
+                if (choice ==3)
+                {
+                    break;
+                }                                                                                                                                                                                                           
 
 
         }
