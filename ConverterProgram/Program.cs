@@ -214,17 +214,17 @@ namespace ConverterProgram
                     voltage = float.Parse(Console.ReadLine());
                     Console.WriteLine("Ange amp");
                     amp = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Kilometer: {0:0.##}", converter.CalculateTraveledDistance(time, speed));
+                    Console.WriteLine("Kilometer: {0:0.##}", converter.CalculateTraveledDistance(voltage, amp));
                 }
 
                 // Calculate Voltage
                 if (choiceFormat == 3)
                 {
-                    Console.WriteLine("Distans");
-                    distance = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Ange timmar");
-                    time = float.Parse(Console.ReadLine());
-                    Console.WriteLine("km/h: {0:0.##}", converter.CalculateSpeed(time, distance));
+                    Console.WriteLine("Ange amp");
+                    amp = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange resistans");
+                    res = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Voltage: {0:0.##}", converter.CalculateSpeed(res, amp));
                 }
 
                 // Återvänd

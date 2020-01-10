@@ -36,13 +36,15 @@ namespace Service
         }
 
         public float CalculateDiameterFromArea(float area)
-        {
-            float area = *d^2/4;
+        {   
+            float diameter = (float)Math.Sqrt((area * 4f) / 3.14f);
+            return diameter;
         }
 
         public float CalculateRadiusFromArea(float area)
         {
-            float area = pi*r^2;
+            float radius = area / 3.14f;
+            return radius;
         }
         public float CalculateTravelTime(float speed, float distance)
         {
@@ -66,7 +68,7 @@ namespace Service
             return voltage;
         }
         
-        public float ConvertCelciusToFahrenheit(float celcius)
+        public float ConvertCelciusToFahrenheit(float celsius)
         {
             float fahrenheit = (celsius * 9) / 5 + 32;
             return fahrenheit;
