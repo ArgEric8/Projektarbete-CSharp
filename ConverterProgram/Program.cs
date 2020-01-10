@@ -190,10 +190,10 @@ namespace ConverterProgram
                 // Calculate Resistance
                 if (choiceFormat == 2)
                 {
-                    Console.WriteLine("Ange timmar");
-                    time = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Ange hastighet");
-                    speed = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange voltage");
+                    voltage = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Ange amp");
+                    amp = float.Parse(Console.ReadLine());
                     Console.WriteLine("Kilometer: {0:0.##}", converter.CalculateTraveledDistance(time, speed));
                 }
 
