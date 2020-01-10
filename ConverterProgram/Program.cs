@@ -280,13 +280,18 @@ namespace ConverterProgram
                     Area = float.Parse(Console.ReadLine());
                     Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(area));
                 }
+                else if (choice == 3)
+                {
+                    Console.WriteLine("Avslutar...");
+                    Environment.Exit(0);
+                }
 
         }
 
         static void showFahrenheitCelsiusMenu()
         {
             ConverterService converter = new ConverterService();
-            choice = 0;
+            int choice = 0;
             float fahrenheit;
             float celsius;
 
@@ -311,13 +316,18 @@ namespace ConverterProgram
                     celsius = float.Parse(Console.ReadLine());
                     Console.WriteLine("Fahrenheit: {0:0.##}", converter.ConvertCelciusToFahrenheit(celsius));
                 }
+                else if (choice == 3)
+                {
+                    Console.WriteLine("Avslutar...");
+                    Environment.Exit(0);
+                }
 
         }
 
         static void showHoursMinutesMenu()
         {
             ConverterService converter = new ConverterService();
-            choice = 0;
+            int choice = 0;
             float hours;
             float minutes;
 
