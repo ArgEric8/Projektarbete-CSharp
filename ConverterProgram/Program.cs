@@ -110,16 +110,17 @@ namespace ConverterProgram
                         if (letter == false)
                         {
                             Console.WriteLine("Bokstäver tillåts inte");
+                            letter = true;
                         }
                         Console.WriteLine("Ange km/h");
                         letter = float.TryParse(Console.ReadLine(), out speed);
                         if (letter == false)
                         {
                             Console.WriteLine("Bokstäver tillåts inte");
+                            letter = true;
                         }
                         else {break;}
                         Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
-                        letter = false;
                     }
                 }
 
@@ -278,6 +279,7 @@ namespace ConverterProgram
                 Console.WriteLine("\n1. Diametern av Arean");
                 Console.WriteLine("2. Radien av Arean");
                 Console.WriteLine("3. Återvänd");
+                Console.WriteLine("4. Avsluta");
                 choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
 
@@ -293,7 +295,11 @@ namespace ConverterProgram
                     Area = float.Parse(Console.ReadLine());
                     Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(Area));
                 }
-                else if (choice == 3)
+                if(choice == 3)
+                {
+                    // break??
+                }
+                else if (choice == 4)
                 {
                     Console.WriteLine("Avslutar...");
                     Environment.Exit(0);
