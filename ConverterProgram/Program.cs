@@ -146,15 +146,35 @@ namespace ConverterProgram
             // Liter Gallon Meny
 
             // Återvänd
-            if (choiceFormat == 4)
-            {
-                Console.WriteLine("Återvänd");
-            }
+            ConverterService converter = new ConverterService();
+            float Gallon;
+            float Liter;
+            int choiceFormat = 0;
+            while (choiceFormat !=5){
+                  
+                    Console.WriteLine("1: Gallon till liter");
+                    Console.WriteLine("2: Liter till Gallon");
+                    choiceFormat = Convert.ToInt32(Console.ReadLine());
 
-            // Avsluta
-            else if (choiceFormat == 5)
-            {
-                Console.WriteLine("Avsluta");
+                
+                if (choiceFormat == 1)
+                {
+                    Console.WriteLine("Skriv in dina Gallons");
+                     Gallon = float.Parse(Console.ReadLine());
+                     Console.WriteLine("så här många liter blir det {0}",converter.ConvertFromGallonToLiter(Gallon));
+                    
+
+                }
+                if (choiceFormat == 2)
+                {
+                    
+                }
+
+                // Avsluta
+                else if (choiceFormat == 5)
+                {
+                    Console.WriteLine("Avsluta");
+                }
             }
         }
 
