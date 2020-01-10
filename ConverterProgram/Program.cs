@@ -329,6 +329,20 @@ namespace ConverterProgram
                 Console.WriteLine("3. Återvänd");
                 choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
+                
+                if(choice == 1)
+                {
+                    Console.WriteLine("Ange Timmar");
+                    hours = float.Parse(Console.ReadLine());
+                    Console.WriteLine("I minuter: {0:##}", converter.ConvertFromHoursToMinutes(hours));
+
+                }
+                if(choice == 2)
+                {
+                    Console.WriteLine("Ange Minuter");
+                    minutes = float.Parse(Console.ReadLine());
+                    Console.WriteLine("I timmar: {0.##}", converter.ConvertFromMinutesToHours(minutes));
+                }
 
 
         }
