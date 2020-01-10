@@ -226,7 +226,7 @@ namespace ConverterProgram
                     voltage = float.Parse(Console.ReadLine());
                     Console.WriteLine("Ange amp");
                     amp = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Kilometer: {0:0.##}", converter.CalculateTraveledDistance(voltage, amp));
+                    Console.WriteLine("Resistans: {0:0.##}", converter.CalculateTraveledDistance(voltage, amp));
                 }
 
                 // Calculate Voltage
@@ -255,8 +255,6 @@ namespace ConverterProgram
         {
             ConverterService converter = new ConverterService();
             int choice = 0;
-            float Diameter;
-            float Radius;
             float Area;
 
 
@@ -272,13 +270,18 @@ namespace ConverterProgram
                 {
                     Console.WriteLine("Ange Arean");
                     Area = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Diametern av Arean är: {0:0.##}", converter.CalculateDiameterFromArea(area));
+                    Console.WriteLine("Diametern av Arean är: {0:0.##}", converter.CalculateDiameterFromArea(Area));
                 }
                 if(choice == 2)
                 {
                     Console.WriteLine("Ange Arean");
                     Area = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(area));
+                    Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(Area));
+                }
+                else if (choice == 3)
+                {
+                    Console.WriteLine("Avslutar...");
+                    Environment.Exit(0);
                 }
 
         }
@@ -286,7 +289,7 @@ namespace ConverterProgram
         static void showFahrenheitCelsiusMenu()
         {
             ConverterService converter = new ConverterService();
-            choice = 0;
+            int choice = 0;
             float fahrenheit;
             float celsius;
 
@@ -311,13 +314,18 @@ namespace ConverterProgram
                     celsius = float.Parse(Console.ReadLine());
                     Console.WriteLine("Fahrenheit: {0:0.##}", converter.ConvertCelciusToFahrenheit(celsius));
                 }
+                else if (choice == 3)
+                {
+                    Console.WriteLine("Avslutar...");
+                    Environment.Exit(0);
+                }
 
         }
 
         static void showHoursMinutesMenu()
         {
             ConverterService converter = new ConverterService();
-            choice = 0;
+            int choice = 0;
             float hours;
             float minutes;
 
