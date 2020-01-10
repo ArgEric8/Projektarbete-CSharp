@@ -85,14 +85,14 @@ namespace Service
 
         public float ConvertFromGallonToLiter(float gallon)
         {
-            float liter = 0.26f * gallon;
+            float liter = 3.78f * gallon;
             return liter;
         }
 
         public float ConvertFromLiterToGallon(float liter)
         {
             
-            float gallon = 3.78f * liter;
+            float gallon = 0.26f * liter;
             return gallon;
         }
 
