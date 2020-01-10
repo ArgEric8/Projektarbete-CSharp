@@ -243,8 +243,6 @@ namespace ConverterProgram
         {
             ConverterService converter = new ConverterService();
             choice = 0;
-            float Diameter;
-            float Radius;
             float Area;
 
 
@@ -258,21 +256,66 @@ namespace ConverterProgram
 
                 if(choice == 1)
                 {
-                    Console.WriteLine("Ange Diamtern");
-                    Diameter = float.Parse(Console.ReadLine());
-                    Console.WriteLine("Diametern av Arean är: {0:0.##}", converter.CalculateDiameterFromArea(Area));
+                    Console.WriteLine("Ange Arean");
+                    Area = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Diametern av Arean är: {0:0.##}", converter.CalculateDiameterFromArea(area));
                 }
-                if(choice )
+                if(choice == 2)
+                {
+                    Console.WriteLine("Ange Arean");
+                    Area = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(area));
+                }
 
         }
 
         static void showFahrenheitCelsiusMenu()
         {
+            ConverterService converter = new ConverterService();
+            choice = 0;
+            float fahrenheit;
+            float celsius;
+
+
+            while(choice !=3)
+             Console.WriteLine("\nHuvudmeny/Fahrenheit och Celsius /");
+                Console.WriteLine("\n1. Konventera Fahrenheit till Celsius");
+                Console.WriteLine("2. Konventera Celsius till Fahrenheit");
+                Console.WriteLine("3. Återvänd");
+                choice = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+
+                if(choice == 1)
+                {
+                    Console.WriteLine("Ange Fahrenheit");
+                    fahrenheit = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Celsius: {0:0.##}", converter.ConvertFahrenheitToCelcius(fahrenheit));
+                }
+                if (choice == 2)
+                {
+                    Console.WriteLine("Ange Celsius");
+                    celsius = float.Parse(Console.ReadLine());
+                    Console.WriteLine("Fahrenheit: {0:0.##}", converter.ConvertCelciusToFahrenheit(celsius));
+                }
 
         }
 
         static void showHoursMinutesMenu()
         {
+            ConverterService converter = new ConverterService();
+            choice = 0;
+            float hours;
+            float minutes;
+
+
+            while(choice !=3)
+             Console.WriteLine("\nHuvudmeny/Timmar och Minuter/");
+                Console.WriteLine("\n1. Timmar till minuter");
+                Console.WriteLine("2. Minuter till timmar");
+                Console.WriteLine("3. Återvänd");
+                choice = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
+
 
         }
     }
