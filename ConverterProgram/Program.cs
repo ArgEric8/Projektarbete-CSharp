@@ -348,11 +348,13 @@ namespace ConverterProgram
             float minutes;
 
 
-            while(choice !=3)
-             Console.WriteLine("\nHuvudmeny/Timmar och Minuter/");
+            while(choice !=4)
+            {
+                Console.WriteLine("\nHuvudmeny/Timmar och Minuter/");
                 Console.WriteLine("\n1. Timmar till minuter");
                 Console.WriteLine("2. Minuter till timmar");
                 Console.WriteLine("3. Återvänd");
+                Console.WriteLine("4. Avsluta");
                 choice = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine();
                 
@@ -369,12 +371,18 @@ namespace ConverterProgram
                     minutes = float.Parse(Console.ReadLine());
                     Console.WriteLine("I timmar: {0.##}", converter.ConvertFromMinutesToHours(minutes));
                 }
+                // Återvänd
                 if (choice ==3)
                 {
                     break;
-                }                                                                                                                                                                                                           
-
-
+                }
+                // Avsluta
+                if (choice ==4)
+                {
+                    Console.WriteLine("Avslutar...");
+                    Environment.Exit(0);
+                }
+            }
         }
     }
 }
