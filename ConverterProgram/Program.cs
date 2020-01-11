@@ -410,7 +410,6 @@ namespace ConverterProgram
                 {
                     Console.WriteLine("Endast siffror godtas, försök igen");
                     letter = true;
-                    break;
                 }
                 else {letter = false;}
             }
