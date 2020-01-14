@@ -372,13 +372,12 @@ namespace ConverterProgram
                         Console.WriteLine("Ange Timmar");
                         hours = ifLetterInput();
                         Console.WriteLine("I minuter: {0:##}", converter.ConvertFromHoursToMinutes(hours));
-
                     }
                     if(choice == 2)
                     {
                         Console.WriteLine("Ange Minuter");
                         minutes = ifLetterInput();
-                        Console.WriteLine("I timmar: {0.##}", converter.ConvertFromMinutesToHours(minutes));
+                        Console.WriteLine("I timmar: {0:##}", converter.ConvertFromMinutesToHours(minutes));
                     }
                     // Återvänd
                     if (choice ==3)
