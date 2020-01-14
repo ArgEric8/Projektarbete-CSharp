@@ -43,7 +43,7 @@ namespace Service
 
         public float CalculateRadiusFromArea(float area)
         {
-            float radius = area / 3.14f;
+            float radius = (float)Math.Sqrt(area / (float)Math.PI);
             return radius;
         }
         public float CalculateTravelTime(float speed, float distance)
@@ -85,29 +85,27 @@ namespace Service
 
         public float ConvertFromGallonToLiter(float gallon)
         {
-            float liter = 3.78f * gallon;
+            float liter = gallon * 3.78541178f;
             return liter;
         }
 
         public float ConvertFromLiterToGallon(float liter)
         {
             
-            float gallon = 0.26f * liter;
+            float gallon = liter * 0.264172052f;
             return gallon;
         }
 
         public float ConvertFromHoursToMinutes(float hours)
         {
-            float minutes = 60 / hours;
+            float minutes = hours * 60;
             return minutes;
-        
          }
 
         public float ConvertFromMinutesToHours(float minutes)
         {
-            float hours = 60 * minutes;
+            float hours = minutes / 60;
             return hours;
-            
         }
     }
 }
