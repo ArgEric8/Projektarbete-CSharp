@@ -86,6 +86,7 @@ namespace ConverterProgram
             float distance;
             float speed;
             float time;
+            bool letter = true;
             int choiceFormat = 0;
 
             while (choiceFormat != 4)
@@ -102,11 +103,25 @@ namespace ConverterProgram
                 // Travel Time
                 if (choiceFormat == 1)
                 {
-                    Console.WriteLine("Ange kilometer");
-                    float.TryParse(Console.ReadLine(), out distance);
-                    Console.WriteLine("Ange km/h");
-                    float.TryParse(Console.ReadLine(), out speed);
-                    Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
+                    while (letter == true)
+                    {
+                        Console.WriteLine("Ange kilometer");
+                        letter = float.TryParse(Console.ReadLine(), out distance);
+                        if (letter == false)
+                        {
+                            Console.WriteLine("Bokstäver tillåts inte");
+                            letter = true;
+                        }
+                        Console.WriteLine("Ange km/h");
+                        letter = float.TryParse(Console.ReadLine(), out speed);
+                        if (letter == false)
+                        {
+                            Console.WriteLine("Bokstäver tillåts inte");
+                            letter = true;
+                        }
+                        else {break;}
+                        Console.WriteLine("Timmar: {0:0.##}", converter.CalculateTravelTime(speed, distance));
+                    }
                 }
 
                 // Travel Distance
@@ -280,13 +295,11 @@ namespace ConverterProgram
                     Area = float.Parse(Console.ReadLine());
                     Console.WriteLine("Radien av Arean är: {0:0.##}", converter.CalculateRadiusFromArea(Area));
                 }
-                 if (choice == 3) 
-                {   
-                    break;
+                if(choice == 3)
+                {
+                    // break??
                 }
-
-                // Avsluta
-                if (choice == 4)
+                else if (choice == 4)
                 {
                     Console.WriteLine("Avsluta");
                     Environment.Exit(0);
@@ -350,8 +363,8 @@ namespace ConverterProgram
 
 
             while(choice !=4)
-            { 
-             Console.WriteLine("\nHuvudmeny/Timmar och Minuter/");
+            {
+                Console.WriteLine("\nHuvudmeny/Timmar och Minuter/");
                 Console.WriteLine("\n1. Timmar till minuter");
                 Console.WriteLine("2. Minuter till timmar");
                 Console.WriteLine("3. Återvänd");
@@ -372,19 +385,18 @@ namespace ConverterProgram
                     minutes = float.Parse(Console.ReadLine());
                     Console.WriteLine("I timmar: {0.##}", converter.ConvertFromMinutesToHours(minutes));
                 }
-                 if (choice == 3) 
-                {   
+                // Återvänd
+                if (choice ==3)
+                {
                     break;
                 }
-
                 // Avsluta
-                if (choice == 4)
+                if (choice ==4)
                 {
-                    Console.WriteLine("Avsluta");
+                    Console.WriteLine("Avslutar...");
                     Environment.Exit(0);
                 }
-                }
-
+            }
         }
     }
 }
