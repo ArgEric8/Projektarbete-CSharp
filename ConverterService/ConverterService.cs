@@ -74,11 +74,8 @@ namespace Service
             return fahrenheit;
         }
            
-        
-
         public float ConvertFahrenheitToCelcius(float fahrenheit)
         {
-
          float celsius = (fahrenheit - 32) * 5 / 9;
          return celsius;
         }
@@ -91,7 +88,6 @@ namespace Service
 
         public float ConvertFromLiterToGallon(float liter)
         {
-            
             float gallon = liter * 0.264172052f;
             return gallon;
         }
@@ -100,7 +96,7 @@ namespace Service
         {
             float minutes = hours * 60;
             return minutes;
-         }
+        }
 
         public float ConvertFromMinutesToHours(float minutes)
         {

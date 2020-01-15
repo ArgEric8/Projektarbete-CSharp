@@ -7,7 +7,6 @@ namespace ConverterProgram
     {
         static void Main(string[] args)
         {
-            ConverterService converter = new ConverterService();
             int choice = 0;
             while (choice != 7)
             {
@@ -24,59 +23,31 @@ namespace ConverterProgram
                 if (int.TryParse(Console.ReadLine(), out choice))
                 {
                     // Första valet
-                    if (choice == 1)
-                    {
-                        showTimeDistanceSpeedMenu();
-                    }
+                    if (choice == 1) { showTimeDistanceSpeedMenu();}
 
                     // Andra valet 
-                    if (choice == 2)
-                    {
-                        showLiterGallonMenu();
-                    }
+                    if (choice == 2) { showLiterGallonMenu(); }
 
                     // Tredje valet 
-                    if (choice == 3)
-                    {
-                        showAmpResistVoltMenu();
-                    }
+                    if (choice == 3) { showAmpResistVoltMenu(); }
 
                     // Fjärde valet 
-                    if (choice == 4)
-                    {
-                        showDiameterRadiusMenu();
-                    }
+                    if (choice == 4) { showDiameterRadiusMenu(); }
 
                     // Femte valet 
-                    if (choice == 5)
-                    {
-                        showFahrenheitCelsiusMenu();
-                    }
+                    if (choice == 5) { showFahrenheitCelsiusMenu(); }
 
                     // Sjätte valet 
-                    if (choice == 6)
-                    {
-                        showHoursMinutesMenu();
-                    }
+                    if (choice == 6) { showHoursMinutesMenu(); }
 
                     // Avsluta programmet
-                    if (choice == 7)
-                    {
-                        Console.WriteLine("Avslutar...");
-                        break;
-                    }
+                    if (choice == 7) { Console.WriteLine("Avslutar..."); break; }
 
                     // För höga siffror eller nolla
-                    if (choice >= 8 || choice == 0)
-                    {
-                        Console.WriteLine("Inte giltig siffra.");
-                    }
+                    if (choice >= 8 || choice == 0) { Console.WriteLine("Inte giltig siffra."); }
                 }
                     // Om TryParse misslyckas (t.ex. bokstav angavs)
-                    else
-                    {
-                        Console.WriteLine("Endast siffror godtas");
-                    }
+                    else { Console.WriteLine("Endast siffror godtas"); }
             }
         }
 
@@ -354,7 +325,6 @@ namespace ConverterProgram
             int choice = 0;
             float hours;
             float minutes;
-
 
             while(choice !=4)
             {
