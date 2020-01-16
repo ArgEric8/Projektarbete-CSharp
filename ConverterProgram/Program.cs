@@ -18,36 +18,35 @@ namespace ConverterProgram
                 Console.WriteLine("5. Fahrenheit, celsius");
                 Console.WriteLine("6. Hours, minutes");
                 Console.WriteLine("7. Avsluta");
-                //choice = Convert.ToInt32(Console.ReadLine());
 
                 if (int.TryParse(Console.ReadLine(), out choice))
                 {
                     // Första valet
                     if (choice == 1) { showTimeDistanceSpeedMenu();}
 
-                    // Andra valet 
+                    // Andra valet
                     if (choice == 2) { showLiterGallonMenu(); }
 
-                    // Tredje valet 
+                    // Tredje valet
                     if (choice == 3) { showAmpResistVoltMenu(); }
 
-                    // Fjärde valet 
+                    // Fjärde valet
                     if (choice == 4) { showDiameterRadiusMenu(); }
 
-                    // Femte valet 
+                    // Femte valet
                     if (choice == 5) { showFahrenheitCelsiusMenu(); }
 
-                    // Sjätte valet 
+                    // Sjätte valet
                     if (choice == 6) { showHoursMinutesMenu(); }
 
                     // Avsluta programmet
-                    if (choice == 7) { Console.WriteLine("Avslutar..."); break; }
+                    if (choice == 7) { Console.WriteLine("Avslutar..."); }
 
                     // För höga siffror eller nolla
                     if (choice >= 8 || choice == 0) { Console.WriteLine("Inte giltig siffra."); }
                 }
                     // Om TryParse misslyckas (t.ex. bokstav angavs)
-                    else { Console.WriteLine("Endast siffror godtas"); }
+                else { Console.WriteLine("Endast siffror godtas"); }
             }
         }
 
@@ -279,7 +278,6 @@ namespace ConverterProgram
             int choice = 0;
             float fahrenheit;
             float celsius;
-
 
             while(choice !=4)
             {
